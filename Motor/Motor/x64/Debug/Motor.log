@@ -1,0 +1,3 @@
+﻿  MainGame.cpp
+C:\Users\ANDREA\OneDrive - Universidad Peruana de Ciencias\Desktop\UPC 7\TeoriaJuegos\Codigo\Motor\Motor\MainGame.cpp(49,14): warning C4305: '+=': truncamiento de 'double' a 'float'
+  Motor.vcxproj -> C:\Users\ANDREA\OneDrive - Universidad Peruana de Ciencias\Desktop\UPC 7\TeoriaJuegos\Codigo\Motor\x64\Debug\Motor.exe
