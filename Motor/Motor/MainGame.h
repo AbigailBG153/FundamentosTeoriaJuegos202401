@@ -2,8 +2,12 @@
 #include <SDL/SDL.h>
 #include<GL/eglew.h>
 #include <iostream>
+#include<vector>
+#include <cmath>
+#include<memory>
 #include "Sprite.h"
 #include "GLS_Program.h"
+#include "Window.h"
 using namespace std;
 
 enum class GameState {
@@ -15,15 +19,23 @@ enum class GameState {
 class MainGame {
 
 private:
-	Sprite sprite;
+	
+
 	int width;
 	int height;
-	SDL_Window* window;
+	Window* window;
 	void init();
 	void processInput();
-	GLS_Program program;
 	void initShaders();
+	GLS_Program program;
 	float time = 0;
+	int cont = 1;
+
+	vector<Sprite> sprites;
+	time_t timer;
+	int selected_position;
+	GLuint next_vboID;
+	
 public:
 	MainGame();
 	~MainGame();
@@ -31,6 +43,10 @@ public:
 	void run();
 	void draw();
 	void update();
-
+	
+	void addSprite();
+	void drawSprite();
+	void cleanSprites();
+	
 
 };
